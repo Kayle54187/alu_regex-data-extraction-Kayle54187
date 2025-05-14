@@ -21,7 +21,7 @@ A web form with 8 regex-powered validations for:
 
 ## 🧪 Test Cases
 
-Full test cases available in [test_cases.txt](test_cases.txt). Examples:
+Full test cases available in [test_cases.txt](/tests/test_cases.txt). Examples:
 | Validation | Valid Example | Invalid Example |
 |-------------|---------------------|-----------------------|
 | Email | `user@domain.com` | `user..name@domain` |
@@ -50,18 +50,3 @@ Full test cases available in [test_cases.txt](test_cases.txt). Examples:
 ## 📜 License
 
 MIT License. See [LICENSE](LICENSE) for details.
-
-````
-
-### How to Use:
-1. Create a GitHub repo named `alu_regex-data-extraction-Kayle54187`
-2. Add these 3 files:
-   - `index.html` (from previous answer)
-   - `test_cases.txt`
-   - `README.md`
-3. Commit and push:
-   ```bash
-   git add .
-   git commit -m "Add full test suite and documentation"
-   git push
-````
