@@ -1,0 +1,100 @@
+# Regex Validation Test Cases
+
+## Email Validation
+? Valid:
+- user@example.com
+- first.last@company.co.uk
+- name+filter@domain.io
+- a@b.co
+
+? Invalid:
+- user..name@domain.com
+- @domain.com
+- user@domain
+- user@.com
+- user@company..com
+
+## URL Validation
+? Valid:
+- https://www.example.com
+- http://sub.domain.org/path?query=1
+- https://example.co.uk:8080/#section
+
+? Invalid:
+- www.example.com (no protocol)
+- ftp://invalid.com
+- https:///empty-host.com
+- https://exa mple.com (space)
+
+## Phone Numbers
+? Valid:
+- (123) 456-7890
+- 123-456-7890
+- 123.456.7890
+- +1 800 555 1234
+
+? Invalid:
+- 12345 (too short)
+- (123)-456-7890 (invalid separator mix)
+- 123-456-78901 (too long)
+- (12A) 456-7890 (letters)
+
+## Credit Cards
+? Valid:
+- 1234 5678 9012 3456
+- 1234-5678-9012-3456
+- 1234567890123456 (no separators)
+
+? Invalid:
+- 1234 567-8901 23456 (inconsistent)
+- 1234-5678 9012-3456 (mixed separators)
+- ABCD 5678 9012 3456 (letters)
+
+## Time Formats
+? Valid 24h:
+- 14:30
+- 23:59
+- 00:00
+
+? Valid 12h:
+- 2:30 PM
+- 12:00 AM
+- 09:05 am
+
+? Invalid:
+- 25:00
+- 12:60 AM
+- 14:30 PM (24h + AM/PM)
+
+## HTML Tags
+? Valid:
+- <p>
+- <div class="container">
+- <img src="img.jpg" alt="test">
+
+? Invalid:
+- </div> (closing tag)
+- <div (unclosed)
+- <123tag> (starts with number)
+
+## Hashtags
+? Valid:
+- #example
+- #CafŽAuLait
+- #123test
+
+? Invalid:
+- # invalid (space)
+- ##double
+- #special!char
+
+## Currency
+? Valid:
+- $19.99
+- 1,234.56
+- 0.99
+
+? Invalid:
+- $1.234 (invalid comma)
+- .99 (no leading zero)
+- $1,23.45
